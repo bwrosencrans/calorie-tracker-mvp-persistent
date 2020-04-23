@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="/fragments :: head">
+</head>
+<body>
+
+<div th:replace="/fragments :: page-header"></div>
+<style>
+
+</style>
+
+<div class="container body-content">
+    <h2>Add Food / Beverage</h2>
+
+    <form action="#" th:action="@{/foodItems/add}" th:object="${newFoodItem}" method="POST">
+        <label th:for="name">Name</label> <input type="text" th:field="*{name}">
+        <label th:for="calorieCount">Calories</label> <input type="text" th:field="*{calorieCount}">
+        <input type="submit" value="Add Item" />
+    </form>
+</div>
+
+</body>
+</html>

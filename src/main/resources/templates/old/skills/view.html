@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+
+<body class="container  body-content">
+<h1 th:text="${'Item: ' + meal.name}">Default Title</h1>
+
+<nav th:replace="fragments :: page-header"></nav>
+
+<div class="foodItem-listing">
+    <p th:text="${'Name: ' + meal.name}"></p>
+    <p th:text="${'Calories: ' + meal.description}"></p>
+    <p> Jobs:
+        <ul>
+            <li th:each="foodItem : ${meal.jobs}">
+                <a th:href="@{'/view/' + ${foodItem.id}}" th:text="${foodItem.name}"></a>
+            </li>
+        </ul>
+    </p>
+</div>

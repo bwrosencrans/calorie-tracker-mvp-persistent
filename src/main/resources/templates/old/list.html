@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head">
+</head>
+<body>
+
+<div th:replace="fragments :: page-header"></div>
+
+<div class="container body-content">
+    <h1 th:text="${#strings.capitalizeWords(title)}"></h1>
+    <h2 class = "centered">View Caloric Intake</h2>
+</div>
+
+<table class="centeredTable">
+    <tr>
+        <th>Date</th>
+        <th>Item</th>
+        <th>Calories</th>
+    </tr>
+
+    <tr>
+        <td>
+            <li>
+                <a th:href="@{/list/jobs(column='All',value='View All')}">View All</a>
+            </li>
+        </td>
+        <td>
+            <li th:each="meal : ${meals}">
+                <a th:href="@{/list/jobs(column=meal,value=${meal.name})}" th:text="${meal.name}"></a>
+            </li>
+
+        </td>
+        <td>
+            <li th:each="meal : ${meals}">
+                <a th:text="${meal.description}"></a>
+            </li>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>

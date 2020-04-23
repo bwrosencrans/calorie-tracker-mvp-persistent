@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/">
+<head th:fragment="head">
+    <!-- Bootstrap stylesheets and script -->
+    <link th:href="@{/css/bootstrap.css}" rel="stylesheet" />
+    <link th:href="@{/css/techjobs.css}" rel="stylesheet" />
+    <script type="text/javascript" th:src="@{/js/bootstrap.js}"></script>
+    <title th:text="'Calorie Tracker' + ${title == null ? '' : ' :: ' + title}"></title>
+</head>
+<body>
+<div th:fragment="page-header" class="my-header navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a th:href="@{/}" class="navbar-brand">Home</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a th:href="@{/foodItems/add}">Add New Food Item</a></li>
+                <li><a th:href="@{/foodItems}">Browse Food Items</a></li>
+                <li><a th:href="@{/meals/create}">Create Meal</a></li>
+                <li><a th:href="@{/meals}">View Meal Calorie Summary</a></li>
+                <li><a th:href="@{/BMRCalculator}">BMR Calculator</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>

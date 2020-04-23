@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head">
+</head>
+<body>
+
+<div th:replace="fragments :: page-header"></div>
+<style>
+
+</style>
+
+<div class="container body-content">
+    <h2>Weekly Projection</h2>
+    <ul>
+        <li th:each="foodItem : ${jobs}">
+            <a th:href="@{'/view/' + ${foodItem.id}}" th:text="${foodItem.name}"></a>
+        </li>
+    </ul>
+
+</div>
+
+</body>
+</html>

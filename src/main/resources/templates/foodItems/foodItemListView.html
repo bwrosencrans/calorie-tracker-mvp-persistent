@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="/fragments :: head">
+</head>
+<body>
+
+<div th:replace="/fragments :: page-header"></div>
+<style>
+
+</style>
+
+<div class="container body-content">
+    <h2>Browse Food Items</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Calories</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="foodItem: ${foodItemList}">
+                <td th:text="${foodItem.name}"></td>
+                <td th:text="${foodItem.calorieCount}"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
