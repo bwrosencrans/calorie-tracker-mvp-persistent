@@ -7,16 +7,12 @@ public class FoodItemData {
 
 
     /**
-     * Returns the results of searching the Jobs data by field and search term.
-     *
-     * For example, searching for employer "Enterprise" will include results
-     * with "Enterprise Holdings, Inc".
-     *
      * @param column meal field that should be searched.
      * @param value Value of the field to search for.
      * @param allFoodItems The list of food to search.
      * @return List of all meals matching the criteria.
      */
+
     public static ArrayList<FoodItem> findByColumnAndValue(String column, String value, Iterable<FoodItem> allFoodItems) {
 
         ArrayList<FoodItem> results = new ArrayList<>();
@@ -75,8 +71,6 @@ public class FoodItemData {
             if (foodItem.getName().toLowerCase().contains(value.toLowerCase())) {
                 results.add(foodItem);
             }
-            //else if (foodItem.getMeals().toString().toLowerCase().contains(value.toLowerCase())) {
-            //    results.add(foodItem);
 
             else if (foodItem.toString().toLowerCase().contains(value.toLowerCase())) {
                 results.add(foodItem);
@@ -86,8 +80,6 @@ public class FoodItemData {
 
         return results;
     }
-
-
 
 }
 

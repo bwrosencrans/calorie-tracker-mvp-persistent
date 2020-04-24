@@ -1311,7 +1311,7 @@ mark,
   background-color: #fcf8e3;
 }
 .text-left {
-  text-align: left;
+  text-align: center;
 }
 .text-right {
   text-align: right;
@@ -2259,7 +2259,7 @@ caption {
   text-align: left;
 }
 th {
-  text-align: left;
+  text-align: center;
 }
 .table {
   width: 100%;
@@ -5282,7 +5282,7 @@ button.list-group-item:focus {
 }
 button.list-group-item {
   width: 100%;
-  text-align: left;
+  text-align: center;
 }
 .list-group-item.disabled,
 .list-group-item.disabled:hover,

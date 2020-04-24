@@ -1,13 +1,12 @@
 package org.launchcode.mealtracker.models;
 
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
+import javax.persistence.*;
+import java.util.Date;
 import java.util.List;
 import java.util.ArrayList;
 
 @Entity
+@Table(name="meal")
 public class Meal extends AbstractEntity {
     private String description;
 
@@ -19,8 +18,20 @@ public class Meal extends AbstractEntity {
     )
     private List<FoodItem> foodItems = new ArrayList<>();
 
+    private Date date;
+
     public Meal() {
         this.description = "";
+        this.date = new Date();
+    }
+
+    public int getCalorieCount() {
+        int result = 0;
+        for(FoodItem item: this.getFoodItems()) {
+            result += item.getCalorieCount();
+        }
+
+        return result;
     }
 
     public List<FoodItem> getFoodItems() {
@@ -32,5 +43,13 @@ public class Meal extends AbstractEntity {
     }
     public void setDescription(String location) {
         this.description = location;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
     }
 }

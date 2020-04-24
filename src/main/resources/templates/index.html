@@ -10,13 +10,14 @@
 </style>
 
 <div class="container body-content">
-    <h2>Weekly Projection</h2>
-    <ul>
-        <li th:each="foodItem : ${jobs}">
-            <a th:href="@{'/view/' + ${foodItem.id}}" th:text="${foodItem.name}"></a>
-        </li>
-    </ul>
-
+    <p>Welcome to your calorie tracker!</p>
+    <p>Begin by adding food items.</p>
+    <p>Food items are stored for future use.  Now you can create a meal!</p>
+    <p>Give your meal a name.  Add and delete items to see the calorie count change.</p>
+    <p>You can view your meal history according to date.</p>
+    <p>If you accidentally added a meal, you can always go back and delete it!</p>
+    <p>Be sure to edit your Basal Metabolic Rate and watch the Weekly Projection for weight loss or gain!</p>
+    <h2>Weekly Projection - Feature Coming Soon</h2>
 </div>
 
 </body>
