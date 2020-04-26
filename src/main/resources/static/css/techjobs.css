@@ -18,6 +18,10 @@ tr:nth-child(odd) {
     background-color: #e4e4e4;
 }
 
+tr:nth-child(even) {
+    background-color: #d4d4d4;
+}
+
 .centeredTable {
     margin-left: auto;
     margin-right: auto;
@@ -62,20 +66,41 @@ div.job-listing {
 }
 
 body {
-  background-image: url("https://www.slatervecchio.com/wp-content/uploads/2014/02/Esther-Hobby-Pic.jpg");
-  background-repeat: no repeat;
-  webkit-background-size: cover;
-  moz-background-size: cover;
-  o-background-size: cover;
-  background-size: cover;
+}
+
+body::after {
+    content: "";
+    background-image: url("https://image.freepik.com/free-photo/exercise-weights-iron-dumbbell-with-extra-plates_1423-529.jpg");
+    background-repeat: no repeat;
+    webkit-background-size: cover;
+    moz-background-size: cover;
+    o-background-size: cover;
+    background-size: cover;
+    opacity: 0.6;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.hero {
 }
 
 h3 {
     font-family: "Trebuchet MS", Helvetica, sans-serif;
-    color: black;
+    color: white;
 }
 
 h2 {
     font-family: "Trebuchet MS", Helvetica, sans-serif;
-    color: black;
+    color: white;
+}
+
+p {
+    font-size: 15;
+    font-weight: bold;
+    color: white;
+
 }

@@ -49,7 +49,7 @@ public class MealController {
     public MealController(
             FoodItemRepository foodItemRepository,
             MealRepository mealRepository
-    ) {
+    )  {
         this.foodItemRepository = foodItemRepository;
         this.mealRepository = mealRepository;
     }
@@ -148,6 +148,21 @@ public class MealController {
         this.mealRepository.save(meal);
 
         return "redirect:/meals/edit/" + mealIdStr;
+    }
+
+    // http::/<domain:port>/meals/123/delete?redirectTo=<someurl>
+    @GetMapping("{mealId}/delete")
+    public String deleteMeal(
+            @PathVariable("mealId") String mealIdStr,
+            @RequestParam("redirectTo") String redirectTo
+    ) {
+        int mealId = Integer.parseInt(mealIdStr);
+        Optional<Meal> mealOpt = this.mealRepository.findById(mealId);
+        Meal meal = mealOpt.get();
+
+        this.mealRepository.delete(meal);
+
+        return "redirect:/" + redirectTo;
     }
 }
 

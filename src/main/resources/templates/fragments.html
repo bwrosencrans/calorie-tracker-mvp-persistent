@@ -8,10 +8,11 @@
     <title th:text="'Calorie Tracker' + ${title == null ? '' : ' :: ' + title}"></title>
 </head>
 <body>
+
 <div th:fragment="page-header" class="my-header navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
-            <a th:href="@{/}" class="navbar-brand">Home</a>
+            <a th:href="@{/}" class="navbar-brand" >Home</a>
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">

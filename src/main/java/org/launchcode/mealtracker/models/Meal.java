@@ -1,9 +1,12 @@
 package org.launchcode.mealtracker.models;
 
 import javax.persistence.*;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 import java.util.ArrayList;
+
+
 
 @Entity
 @Table(name="meal")
