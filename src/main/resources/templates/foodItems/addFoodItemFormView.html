@@ -13,30 +13,12 @@
     <h2>Add Food / Beverage</h2>
 
     <form action="#" th:action="@{/foodItems/add}" th:object="${newFoodItem}" method="POST">
-        <label th:for="name">Name</label>
+        <label th:for="name" style="color: white">Name</label>
         <input type="text" th:field="*{name}">
-        <label th:for="calorieCount">Calories</label>
+        <label th:for="calorieCount" style="color: white">Calories</label>
         <input type="text" th:field="*{calorieCount}">
         <input type="submit" value="Add Item" />
     </form>
-</div>
-
-<div class="container body-content">
-    <h2>Browse Food Items</h2>
-    <table>
-        <thead>
-        <tr>
-            <th>Name</th>
-            <th>Calories</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr th:each="foodItem: ${foodItemList}">
-            <td th:text="${foodItem.name}"></td>
-            <td th:text="${foodItem.calorieCount}"></td>
-        </tr>
-        </tbody>
-    </table>
 </div>
 
 </body>

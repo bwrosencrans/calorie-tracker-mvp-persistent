@@ -68,7 +68,7 @@ div.job-listing {
 body {
 }
 
-body::after {
+body{
     content: "";
     background-image: url("https://image.freepik.com/free-photo/exercise-weights-iron-dumbbell-with-extra-plates_1423-529.jpg");
     background-repeat: no repeat;
@@ -76,7 +76,6 @@ body::after {
     moz-background-size: cover;
     o-background-size: cover;
     background-size: cover;
-    opacity: 0.6;
     top: 0;
     left: 0;
     right: 0;
@@ -85,15 +84,17 @@ body::after {
     z-index: -1;
 }
 
-.hero {
-}
-
 h3 {
     font-family: "Trebuchet MS", Helvetica, sans-serif;
     color: white;
 }
 
 h2 {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    color: white;
+}
+
+h1 {
     font-family: "Trebuchet MS", Helvetica, sans-serif;
     color: white;
 }
